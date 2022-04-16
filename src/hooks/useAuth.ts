@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { setAuth, setModal } from "../store/actionCreators"
+import { setAuth, setModal } from "store/actionCreators"
 
 const loginName = 'sergey'
 const authToken = 'KSV'

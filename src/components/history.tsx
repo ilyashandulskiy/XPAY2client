@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import useTypedSelector from "../hooks/useTypedSelector"
-import instance from "../libs/instance"
-import { Ihistory } from "../types"
-import HistoryItem from "./historyItem"
+import useTypedSelector from "hooks/useTypedSelector"
+import instance from "libs/instance"
+import { Ihistory } from "types"
+import HistoryItem from "components/historyItem"
 
 interface Iprops {
     student_id?: string,

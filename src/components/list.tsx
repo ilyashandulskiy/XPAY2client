@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import useTypedSelector from "../hooks/useTypedSelector"
-import { auth } from "../hooks/useAuth"
-import constants from "../libs/constants"
-import instance from "../libs/instance"
-import { setStudents, setLoading, setModal } from "../store/actionCreators"
-import { Istudent } from "../types"
-import Item from "./item"
+import useTypedSelector from "hooks/useTypedSelector"
+import { auth } from "hooks/useAuth"
+import constants from "libs/constants"
+import instance from "libs/instance"
+import { setStudents, setLoading, setModal } from "store/actionCreators"
+import { Istudent } from "types"
+import Item from "components/item"
 
 const List = () => {
     const students = useTypedSelector(state => state.students)

@@ -1,4 +1,4 @@
-import useTypedSelector from "../hooks/useTypedSelector"
+import useTypedSelector from "hooks/useTypedSelector"
 
 const Toast = () => {
 

@@ -1,6 +1,6 @@
-import { auth } from "../hooks/useAuth"
-import { Istudent } from "../types"
-import { AUTH, SELECT_STUDENT, SET_LOADING, SET_MODAL, SET_STUDENTS } from "./constants"
+import { auth } from "hooks/useAuth"
+import { Istudent } from "types"
+import { AUTH, SELECT_STUDENT, SET_LOADING, SET_MODAL, SET_STUDENTS } from "store/constants"
 
 export interface Istate {
     students: Istudent[],

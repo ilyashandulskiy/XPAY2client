@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux"
-import useTypedSelector from "../hooks/useTypedSelector"
-import constants from "../libs/constants"
-import { setModal } from "../store/actionCreators"
-import AddStudent from "./forms/addStudent"
-import Alert from "./forms/alert"
-import Auth from "./forms/auth"
-import ChangeCash from "./forms/changeCash"
-import RenameStudent from "./forms/renameStudent"
-import History from "./history"
+import useTypedSelector from "hooks/useTypedSelector"
+import constants from "libs/constants"
+import { setModal } from "store/actionCreators"
+import AddStudent from "components/forms/addStudent"
+import Alert from "components/forms/alert"
+import Auth from "components/forms/auth"
+import ChangeCash from "components/forms/changeCash"
+import RenameStudent from "components/forms/renameStudent"
+import History from "components/history"
 
 const Modal = () => {
     const dispatch = useDispatch()

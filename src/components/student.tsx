@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import displayCash from "../libs/displayCash"
-import instance from "../libs/instance"
-import { Ihistory } from '../types'
-import History from "./history"
+import displayCash from "libs/displayCash"
+import instance from "libs/instance"
+import { Ihistory } from 'types'
+import History from "components/history"
 
 interface Istudent {
     name: string,

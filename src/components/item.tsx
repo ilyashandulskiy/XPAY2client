@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import constants from "../libs/constants"
-import copyToClipboard from "../libs/copyToClipboard"
-import displayCash from "../libs/displayCash"
-import { selectedStudent, setLoading, setModal } from "../store/actionCreators"
+import constants from "libs/constants"
+import copyToClipboard from "libs/copyToClipboard"
+import displayCash from "libs/displayCash"
+import { selectedStudent, setModal } from "store/actionCreators"
 
 interface Iprops {
     name: string,

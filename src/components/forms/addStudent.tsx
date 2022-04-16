@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import useTypedSelector from "../../hooks/useTypedSelector"
-import instance from "../../libs/instance"
-import { setLoading, setModal, setStudents } from "../../store/actionCreators"
-import Input from "../ui/input"
+import useTypedSelector from "hooks/useTypedSelector"
+import instance from "libs/instance"
+import { setLoading, setModal, setStudents } from "store/actionCreators"
+import Input from "components/ui/input"
 
 
 const AddStudent = () => {

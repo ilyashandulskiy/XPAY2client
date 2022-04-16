@@ -1,7 +1,7 @@
-import Layout from "./layout"
-import List from "./list"
-import Modal from "./modal"
-import Toast from "./toast"
+import Layout from "components/layout"
+import List from "components/list"
+import Modal from "components/modal"
+import Toast from "components/toast"
 
 const Main = () => (
     <div className="App">

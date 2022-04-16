@@ -1,4 +1,4 @@
-import displayCash from "../libs/displayCash"
+import displayCash from "libs/displayCash"
 
 interface Iprops {
     time: string,

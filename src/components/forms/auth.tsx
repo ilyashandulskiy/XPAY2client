@@ -1,6 +1,6 @@
 import { useState } from "react"
-import useAuth from "../../hooks/useAuth"
-import Input from "../ui/input"
+import useAuth from "hooks/useAuth"
+import Input from "components/ui/input"
 
 
 const Auth = () => {

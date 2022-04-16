@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import Main from "../components/main"
-import Student from "../components/student"
+import Main from "components/main"
+import Student from "components/student"
 
 const Router = () => {
     return (

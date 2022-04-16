@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import {setModal} from "../../store/actionCreators"
+import {setModal} from "store/actionCreators"
 
 
 const Alert = () => {

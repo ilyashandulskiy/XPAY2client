@@ -1,5 +1,5 @@
-import { Istudent } from "../types";
-import { AUTH, SELECT_STUDENT, SET_LOADING, SET_MODAL, SET_STUDENTS } from "./constants";
+import { Istudent } from "types";
+import { AUTH, SELECT_STUDENT, SET_LOADING, SET_MODAL, SET_STUDENTS } from "store/constants";
 
 export const setStudents = (students: Istudent[]) => ({
     type: SET_STUDENTS,
