@@ -1,4 +1,3 @@
+const copyToClipboard = (text: string) => navigator.clipboard.writeText(text);
 
-const copyToClipboard = (text: string) =>  navigator.clipboard.writeText(text)
-
-export default copyToClipboard
+export default copyToClipboard;

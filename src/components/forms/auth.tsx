@@ -1,33 +1,33 @@
-import { useState } from "react"
-import useAuth from "hooks/useAuth"
-import Input from "components/ui/input"
-import lang from "libs/lang"
+import { useState } from 'react';
+import useAuth from 'hooks/useAuth';
+import Input from 'components/ui/input';
+import lang from 'libs/lang';
 
-const Auth = () => {
-    const [name, setName] = useState<string>('')
-    const login = useAuth()
+function Auth() {
+  const [name, setName] = useState<string>('');
+  const login = useAuth();
 
-    const onAuthorizate = () => {
-        login(name)
-    }
+  const onAuthorizate = () => {
+    login(name);
+  };
 
-    return (
-        <>
-            <Input
-                label={lang.FORMS.LOGIN}
-                value={name}
-                onChange={setName}
-            />
+  return (
+    <>
+      <Input
+        label={lang.FORMS.LOGIN}
+        value={name}
+        onChange={setName}
+      />
 
-            <button
-                onClick={onAuthorizate}
-                className={"btn btn-lg btn-success"}
-            >
-                Войти
-            </button>
-        </>
-    )
-
+      <button
+        onClick={onAuthorizate}
+        type="button"
+        className="btn btn-lg btn-success"
+      >
+        Войти
+      </button>
+    </>
+  );
 }
 
-export default Auth
+export default Auth;

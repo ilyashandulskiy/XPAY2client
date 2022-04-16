@@ -1,6 +1,5 @@
-
 export interface Istudent {
-    name: string, 
+    name: string,
     cash: number,
     _id: string,
     count: number

@@ -1,14 +1,16 @@
-import { Istudent } from "types";
-import { SET_STUDENTS, SET_LOADING, SET_MODAL, SELECT_STUDENT, AUTH } from "store/constants";
-import constants from 'libs/constants'
+import { Istudent } from 'types';
+import {
+  SET_STUDENTS, SET_LOADING, SET_MODAL, SELECT_STUDENT, AUTH,
+} from 'store/constants';
+import constants from 'libs/constants';
 
-export type I_MODALS = typeof constants.MODAL_STATES.ADD_CASH | 
-    typeof constants.MODAL_STATES.ADD_CASH | 
-    typeof constants.MODAL_STATES.SUBTRACT_CASH | 
-    typeof constants.MODAL_STATES.HISTORY | 
-    typeof constants.MODAL_STATES.ADD_STUDENT | 
-    typeof constants.MODAL_STATES.RENAME_STUDENT | 
-    typeof constants.MODAL_STATES.COPIED | 
+export type I_MODALS = typeof constants.MODAL_STATES.ADD_CASH |
+    typeof constants.MODAL_STATES.ADD_CASH |
+    typeof constants.MODAL_STATES.SUBTRACT_CASH |
+    typeof constants.MODAL_STATES.HISTORY |
+    typeof constants.MODAL_STATES.ADD_STUDENT |
+    typeof constants.MODAL_STATES.RENAME_STUDENT |
+    typeof constants.MODAL_STATES.COPIED |
     typeof constants.MODAL_STATES.AUTH
 
 export interface I_SET_STUDENTS {

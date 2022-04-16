@@ -1,9 +1,10 @@
-import Layout from "components/layout"
-import List from "components/list"
-import Modal from "components/modal"
-import Toast from "components/toast"
+import Layout from 'components/layout';
+import List from 'components/list';
+import Modal from 'components/modal';
+import Toast from 'components/toast';
 
-const Main = () => (
+function Main() {
+  return (
     <div className="App">
       <Layout>
         <Toast />
@@ -11,6 +12,7 @@ const Main = () => (
         <List />
       </Layout>
     </div>
-)
+  );
+}
 
-export default Main
+export default Main;
