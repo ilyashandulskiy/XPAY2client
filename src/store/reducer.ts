@@ -12,10 +12,8 @@ export interface Istate {
     auth: boolean
 }
 
-export interface Iaction {
-    type: string,
-    payload: I_SET_STUDENTS | I_SET_LOADING | I_SET_MODAL | I_SELECT_STUDENT | I_AUTH,
-}
+export type Iaction = I_SET_STUDENTS |
+    I_SET_LOADING | I_SET_MODAL | I_SELECT_STUDENT | I_AUTH;
 
 export const initState: Istate = {
     students: [],

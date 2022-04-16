@@ -39,7 +39,7 @@ const RenameStudent = () => {
 
             <button
                 onClick={onAddStudent}
-                disabled={loading}
+                disabled={Boolean(loading)}
                 className={"btn btn-lg btn-success"}
             >
                 {lang.FORMS.RENAME}
