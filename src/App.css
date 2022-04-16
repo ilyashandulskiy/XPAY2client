@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+*::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: lightgray;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 3px solid white;  /* padding вокруг плашки */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__trainer {
+  margin: 0px 15px;
+  justify-self: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout {
   display: flex;
   flex-direction: column;
+}
+
+.table {
+  font-size: 18px;
+}
+
+.item-buttons {
+  width: 500px;
+}
+
+.item-buttons__inner {
+  transition-duration: 0.25s;
+}
+
+td, th {
+  padding: 15px !important;
+}
+
+.item-btn {
+  margin: 0px 10px
+}
+
+.toast {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+}
+
+.toast__text {
+  margin: 0px 15px;
+  color: black;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.welcome-emoji {
+  width: 100px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.add-btn {
+  align-self: center;
+  margin: auto;
+}
+
+.add-button-container {
+  display: flex;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.student {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.student .display-1 {
+  margin: 20px
+}
+
+.student .h1 {
+  margin-bottom: 30px
 }
