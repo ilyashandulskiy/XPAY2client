@@ -1,8 +1,15 @@
 
 const constants = {
-    baseURL: 'https://xpay-server.herokuapp.com/',
-    studentURL: 'https://ilyacompany.com/xpay/student/',
-    modal_states: {
+    BASE_URL: 'https://xpay-server.herokuapp.com/',
+    STUDENT_URL: 'https://ilyacompany.com/xpay/student/',
+    LOCAL_STOTAGE_ID: 'xpay_loginID',
+    API_METHODS: {
+        STUDENT: 'student',
+        STUDENTS: 'students',
+        DEAL: 'deal',
+        HISTORY: 'history'
+    },
+    MODAL_STATES: {
         ADD_CASH: "ADD_CASH",
         SUBTRACT_CASH: "SUBTRACT_CASH",
         HISTORY: "HISTORY",

@@ -4,7 +4,8 @@ import useTypedSelector from "hooks/useTypedSelector"
 import instance from "libs/instance"
 import { setLoading, setModal, setStudents } from "store/actionCreators"
 import Input from "components/ui/input"
-
+import lang from "libs/lang"
+import constants from "libs/constants"
 
 const AddStudent = () => {
     const dispatch = useDispatch()
@@ -12,9 +13,9 @@ const AddStudent = () => {
     const [name, setName] = useState<string>('')
 
     const onAddStudent = () => {
-        dispatch(setLoading('Изменение баланса'))
+        dispatch(setLoading(lang.TOAST.CHANGING_BALANCE))
 
-        instance.post('student', {
+        instance.post(constants.API_METHODS.STUDENT, {
             name,
             cash: 0
         })
@@ -30,14 +31,18 @@ const AddStudent = () => {
 
     return (
         <>
-            <Input label="Имя студента" value={name} onChange={setName} />
+            <Input
+                label={lang.FORMS.STUDENT_NAME}
+                value={name}
+                onChange={setName}
+            />
 
             <button
                 onClick={onAddStudent}
                 disabled={loading}
                 className={"btn btn-lg btn-success"}
             >
-                Добавить
+                {lang.FORMS.ADD}
             </button>
         </>
     )

@@ -1,3 +1,4 @@
+import constants from "libs/constants"
 import { useDispatch } from "react-redux"
 import { setAuth, setModal } from "store/actionCreators"
 
@@ -5,7 +6,7 @@ const loginName = 'sergey'
 const authToken = 'KSV'
 
 export const auth = () => {
-    return localStorage.getItem('xpay_loginID')  === authToken
+    return localStorage.getItem(constants.LOCAL_STOTAGE_ID)  === authToken
 }
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
     return function(passcode: string){
 
         if (passcode === loginName) {
-            localStorage.setItem('xpay_loginID', authToken)
+            localStorage.setItem(constants.LOCAL_STOTAGE_ID, authToken)
             dispatch(setAuth())
             dispatch(setModal(false))
             return true

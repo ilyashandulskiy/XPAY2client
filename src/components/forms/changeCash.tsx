@@ -4,6 +4,8 @@ import useTypedSelector from "hooks/useTypedSelector"
 import instance from "libs/instance"
 import { setLoading, setModal, setStudents } from "store/actionCreators"
 import Input from "components/ui/input"
+import lang from "libs/lang"
+import constants from "libs/constants"
 
 interface Iprops {
     act: 'add' | 'subtract'
@@ -16,15 +18,15 @@ const ChangeCash = ({act}: Iprops) => {
     const [amount, setAmount] = useState<string>('0');
 
     const onAddCash = () => {
-        dispatch(setLoading('Изменение баланса'))
+        dispatch(setLoading(lang.TOAST.CHANGING_BALANCE))
 
         const price = act === 'add' ? Math.abs(+amount) : Math.abs(+amount)*(-1)
 
-        instance.post('deal', {
+        instance.post(constants.API_METHODS.DEAL, {
             student_id,
             price
         })
-            .then(({data}) => {
+            .then(({ data }) => {
                 dispatch(setStudents(data))
                 dispatch(setLoading(false))
                 dispatch(setModal(false))
@@ -37,18 +39,21 @@ const ChangeCash = ({act}: Iprops) => {
 
     return (
         <>
-            <Input value={amount} label="₽" onChange={setAmount} />
+            <Input
+                value={amount}
+                label={lang.CURRENCY.SIGN}
+                onChange={setAmount}
+            />
 
             <button
                 disabled={loading}
                 onClick={onAddCash}
                 className={"btn btn-lg " + (act === 'add' ? 'btn-success' : 'btn-danger')}
             >
-                {act === 'add' ? 'Пополнить' : 'Списать'}
+                {act === 'add' ? lang.CASH.ADD : lang.CASH.SUBTRACT}
             </button>
         </>
     )
-
 }
 
 export default ChangeCash

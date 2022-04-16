@@ -1,7 +1,6 @@
 import useTypedSelector from "hooks/useTypedSelector"
 
 const Toast = () => {
-
     const loadingText = useTypedSelector(state => state.loading)
 
     if (!loadingText) return null

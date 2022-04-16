@@ -4,7 +4,8 @@ import useTypedSelector from "hooks/useTypedSelector"
 import instance from "libs/instance"
 import { setLoading, setModal, setStudents } from "store/actionCreators"
 import Input from "components/ui/input"
-
+import lang from "libs/lang"
+import constants from "libs/constants"
 
 const RenameStudent = () => {
     const dispatch = useDispatch()
@@ -13,9 +14,9 @@ const RenameStudent = () => {
     const [name, setName] = useState<string>('')
 
     const onAddStudent = () => {
-        dispatch(setLoading('Изменение информации'))
+        dispatch(setLoading(lang.TOAST.CHANGING_INFO))
 
-        instance.post('student/' + selected, {
+        instance.post(constants.API_METHODS.STUDENT + '/' + selected, {
             name
         })
             .then(({data}) => {
@@ -30,18 +31,21 @@ const RenameStudent = () => {
 
     return (
         <>
-            <Input value={name} label="Имя студента" onChange={setName} />
+            <Input
+                value={name}
+                label={lang.FORMS.STUDENT_NAME}
+                onChange={setName}
+            />
 
             <button
                 onClick={onAddStudent}
                 disabled={loading}
                 className={"btn btn-lg btn-success"}
             >
-                Переименовать
+                {lang.FORMS.RENAME}
             </button>
         </>
     )
-
 }
 
 export default RenameStudent

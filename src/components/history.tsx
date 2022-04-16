@@ -3,6 +3,7 @@ import useTypedSelector from "hooks/useTypedSelector"
 import instance from "libs/instance"
 import { Ihistory } from "types"
 import HistoryItem from "components/historyItem"
+import constants from "libs/constants"
 
 interface Iprops {
     student_id?: string,
@@ -15,7 +16,7 @@ const History = ({ student_id, reversed }: Iprops) => {
     const [history, setHistory] = useState<Ihistory[]>([])
 
     useEffect(() => {
-        instance.get('history/' + student)
+        instance.get(constants.API_METHODS.HISTORY + '/' + student)
             .then(({ data }) => {
                 setHistory(reversed ? data.reverse() : data)
             })
@@ -25,7 +26,13 @@ const History = ({ student_id, reversed }: Iprops) => {
         <table className="table table-hover">
             <tbody className="history__list">
                 {
-                    history.map((item: Ihistory) => <HistoryItem time={item.time} price={item.price} />)
+                    history.map((item: Ihistory) =>
+                        <HistoryItem
+                            time={item.time}
+                            key={item.price + item.time}
+                            price={item.price}
+                        />
+                    )
                 }
             </tbody>
         </table>

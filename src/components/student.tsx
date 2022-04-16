@@ -4,6 +4,7 @@ import displayCash from "libs/displayCash"
 import instance from "libs/instance"
 import { Ihistory } from 'types'
 import History from "components/history"
+import constants from "libs/constants"
 
 interface Istudent {
     name: string,
@@ -16,7 +17,7 @@ const Student = () => {
     const [student, setStudent] = useState<Istudent>()
     
     useEffect(() => {
-        instance.get('student/' + id)
+        instance.get(constants.API_METHODS.STUDENT + '/' + id)
             .then(({ data }) => setStudent(data))
     })
 
@@ -33,7 +34,6 @@ const Student = () => {
             />
         </div>
     )
-
 }
 
 export default Student

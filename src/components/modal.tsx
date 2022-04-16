@@ -8,6 +8,7 @@ import Auth from "components/forms/auth"
 import ChangeCash from "components/forms/changeCash"
 import RenameStudent from "components/forms/renameStudent"
 import History from "components/history"
+import lang from "libs/lang"
 
 const Modal = () => {
     const dispatch = useDispatch()
@@ -21,46 +22,33 @@ const Modal = () => {
         dispatch(setModal(false))
     }
 
-    const Welcome = () => (
-        <>
-            <p>Полностью переделанная платформа, которая теперь использует новейшие технологии!</p>
-            <p>Новая версия в десятки раз стабильнее, безопаснее и быстрее!</p>
-            <img className="welcome-emoji" alt="welcome" src="./images/welcome.png" />
-            <button className="btn btn-lg btn-success" onClick={onClose}>Отлично!</button> 
-        </>
-    )
-
     switch (visible) {
-        case constants.modal_states.WELCOME:
-            title = 'Добро пожаловать в XPAY 4.0!'
-            component = <Welcome />
-            break;
-        case constants.modal_states.ADD_CASH:
-            title = 'Пополнить баланс'
+        case constants.MODAL_STATES.ADD_CASH:
+            title = lang.MODAL.ADD
             component = <ChangeCash act="add" />
             break;
-        case constants.modal_states.SUBTRACT_CASH:
-            title = 'Списать баланс'
+        case constants.MODAL_STATES.SUBTRACT_CASH:
+            title = lang.MODAL.SUBTRACT
             component = <ChangeCash act="subtract" />
             break;
-        case constants.modal_states.HISTORY:
-            title = 'История платежей'
+        case constants.MODAL_STATES.HISTORY:
+            title = lang.MODAL.HISTORY
             component = <History />
             break;
-        case constants.modal_states.ADD_STUDENT:
-            title = 'Добавить студента'
+        case constants.MODAL_STATES.ADD_STUDENT:
+            title = lang.MODAL.ADD_STUDENT
             component = <AddStudent />
             break;
-        case constants.modal_states.RENAME_STUDENT:
-            title = 'Переименовать студента'
+        case constants.MODAL_STATES.RENAME_STUDENT:
+            title = lang.MODAL.RENAME_STUDENT
             component = <RenameStudent />
             break;
-        case constants.modal_states.COPIED:
-            title = 'Ссылка скопирована!'
+        case constants.MODAL_STATES.COPIED:
+            title = lang.MODAL.COPIED
             component = <Alert />
             break;
-        case constants.modal_states.AUTH:
-            title = 'Войти в аккаунт'
+        case constants.MODAL_STATES.AUTH:
+            title = lang.MODAL.LOGIN
             closeble = false
             component = <Auth />
             break;
@@ -68,17 +56,33 @@ const Modal = () => {
     
     return (
         <>
-            <div style={{pointerEvents: visible ? 'all' : 'none'}} className={"modal-backdrop fade " + (visible && "show")}></div>
-            <div style={{pointerEvents: visible ? 'all' : 'none', display: 'block'}} className={"modal fade " + (visible && "show")} id="exampleModalDefault" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+            <div
+                style={{ pointerEvents: visible ? 'all' : 'none' }}
+                className={"modal-backdrop fade " + (visible && "show")}
+            />
+            <div
+                style={{ pointerEvents: visible ? 'all' : 'none', display: 'block' }}
+                className={"modal fade " + (visible && "show")}
+                id="exampleModalDefault"
+                aria-labelledby="exampleModalLabel"
+                aria-modal="true"
+                role="dialog"
+            >
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">{title}</h5>
                             {
-                                closeble ?
-                                    <button type="button" onClick={onClose} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    :
-                                    null
+                            closeble ?
+                                <button
+                                    type="button"
+                                    onClick={onClose}
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                />
+                                :
+                                null
                             }
                         </div>
                         <div className="modal-body">
@@ -89,7 +93,6 @@ const Modal = () => {
             </div>
         </>
     )
-
 }
 
 export default Modal

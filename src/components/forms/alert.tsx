@@ -1,6 +1,6 @@
+import lang from "libs/lang"
 import { useDispatch } from "react-redux"
-import {setModal} from "store/actionCreators"
-
+import { setModal } from "store/actionCreators"
 
 const Alert = () => {
     const dispatch = useDispatch()
@@ -10,14 +10,12 @@ const Alert = () => {
     }
 
     return (
-        <>
-            <button
-                onClick={close}
-                className={"btn btn-lg btn-success"}
-            >
-                Хорошо
-            </button>
-        </>
+        <button
+            onClick={close}
+            className={"btn btn-lg btn-success"}
+        >
+            {lang.FORMS.OK}
+        </button>
     )
 
 }
