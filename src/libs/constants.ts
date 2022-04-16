@@ -15,7 +15,6 @@ const constants = {
         HISTORY: "HISTORY",
         ADD_STUDENT: "ADD_STUDENT",
         RENAME_STUDENT: "RENAME_STUDENT",
-        WELCOME: "WELCOME",
         AUTH: "AUTH",
         COPIED: "COPIED"
     }
