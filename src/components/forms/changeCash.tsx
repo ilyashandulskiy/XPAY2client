@@ -46,7 +46,7 @@ const ChangeCash = ({act}: Iprops) => {
             />
 
             <button
-                disabled={loading}
+                disabled={Boolean(loading)}
                 onClick={onAddCash}
                 className={"btn btn-lg " + (act === 'add' ? 'btn-success' : 'btn-danger')}
             >

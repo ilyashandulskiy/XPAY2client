@@ -30,7 +30,8 @@ const lang = {
 
     TOAST: {
         CHANGING_BALANCE: 'Изменение баланса',
-        CHANGING_INFO: 'Изменение информации'
+        CHANGING_INFO: 'Изменение информации',
+        LOADING_STUDENTS: 'Загрузка студентов'
     },
 
     FORMS: {
