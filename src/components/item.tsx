@@ -25,6 +25,11 @@ function Item({
     dispatch(selectedStudent(id));
   };
 
+  const onHide = () => {
+    dispatch(setModal(constants.MODAL_STATES.HIDE));
+    dispatch(selectedStudent(id));
+  };
+
   const onSubtractCash = () => {
     dispatch(setModal(constants.MODAL_STATES.SUBTRACT_CASH));
     dispatch(selectedStudent(id));
@@ -89,6 +94,13 @@ function Item({
             onClick={onHistory}
           >
             {lang.CASH.HISTORY}
+          </button>
+          <button
+            className="btn btn-outline-danger item-btn"
+            type="button"
+            onClick={onHide}
+          >
+            {lang.CASH.HIDE}
           </button>
         </div>
       </td>

@@ -21,6 +21,7 @@ const lang = {
     RENAME_STUDENT: 'Переименовать студента',
     COPIED: 'Ссылка скопирована!',
     LOGIN: 'Войти в аккаунт',
+    HIDE: 'Скрыть студента?',
   },
 
   CURRENCY: {
@@ -40,6 +41,7 @@ const lang = {
     OK: 'Хорошо',
     LOGIN: 'Логин',
     RENAME: 'Переименовать',
+    HIDE: 'Скрыть',
   },
 
   CASH: {
@@ -47,6 +49,7 @@ const lang = {
     SUBTRACT: 'Списать',
     ROOM: 'Кабинет',
     HISTORY: 'История',
+    HIDE: 'Скрыть',
   },
 
 };

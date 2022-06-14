@@ -4,6 +4,7 @@ const constants = {
   LOCAL_STOTAGE_ID: 'xpay_loginID',
   API_METHODS: {
     STUDENT: 'student',
+    HIDE_STUDENT: 'student/hide',
     STUDENTS: 'students',
     DEAL: 'deal',
     HISTORY: 'history',
@@ -16,6 +17,7 @@ const constants = {
     RENAME_STUDENT: 'RENAME_STUDENT',
     AUTH: 'AUTH',
     COPIED: 'COPIED',
+    HIDE: 'HIDE',
   },
 };
 

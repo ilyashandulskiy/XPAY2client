@@ -9,6 +9,8 @@ import ChangeCash from 'components/forms/changeCash';
 import RenameStudent from 'components/forms/renameStudent';
 import History from 'components/history';
 import lang from 'libs/lang';
+// eslint-disable-next-line import/extensions
+import Hide from './forms/hide';
 
 function Modal() {
   const dispatch = useDispatch();
@@ -46,6 +48,10 @@ function Modal() {
     case constants.MODAL_STATES.COPIED:
       title = lang.MODAL.COPIED;
       component = <Alert />;
+      break;
+    case constants.MODAL_STATES.HIDE:
+      title = lang.MODAL.HIDE;
+      component = <Hide />;
       break;
     case constants.MODAL_STATES.AUTH:
       title = lang.MODAL.LOGIN;
