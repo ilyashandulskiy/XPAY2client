@@ -20,7 +20,6 @@ function List() {
         dispatch(setStudents(data));
         dispatch(setLoading(false));
       })
-      .catch(console.log);
   };
 
   useEffect(() => {
@@ -48,16 +47,16 @@ function List() {
         </thead>
         <tbody>
           {
-                        students.map((item: Istudent, index: number) => (
-                          <Item
-                            id={item._id}
-                            count={item.count}
-                            name={item.name}
-                            cash={item.cash}
-                            index={index}
-                          />
-                        ))
-                    }
+            students.map((item: Istudent, index: number) => (
+              <Item
+                id={item._id}
+                count={item.count}
+                name={item.name}
+                cash={item.cash}
+                index={index}
+              />
+            ))
+        }
         </tbody>
       </table>
       <div className="add-button-container">

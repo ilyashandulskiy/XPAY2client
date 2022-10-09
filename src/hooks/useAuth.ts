@@ -9,7 +9,7 @@ export const auth = () => localStorage.getItem(constants.LOCAL_STOTAGE_ID) === a
 
 const Login = () => {
   const dispatch = useDispatch();
-  return function (passcode: string) {
+  return (passcode: string) => {
     if (passcode === loginName) {
       localStorage.setItem(constants.LOCAL_STOTAGE_ID, authToken);
       dispatch(setAuth());
