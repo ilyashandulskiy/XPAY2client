@@ -1,5 +1,5 @@
 const constants = {
-  BASE_URL: 'https://xpay-server.herokuapp.com/',
+  BASE_URL: 'http://194.58.108.158:1111/',
   STUDENT_URL: 'https://ilyalite.website.yandexcloud.net/xpay/student/',
   LOCAL_STOTAGE_ID: 'xpay_loginID',
   API_METHODS: {
