@@ -19,7 +19,7 @@ function List() {
       .then(({ data }) => {
         dispatch(setStudents(data));
         dispatch(setLoading(false));
-      })
+      });
   };
 
   useEffect(() => {
