@@ -1,6 +1,6 @@
 const constants = {
-  BASE_URL: 'http://194.58.108.158:1111/',
-  STUDENT_URL: 'https://ilyalite.website.yandexcloud.net/xpay/student/',
+  BASE_URL: 'https://api.ilyaprojects.com/xpay/',
+  STUDENT_URL: 'https://ilyaprojects.com/xpay/student/',
   LOCAL_STOTAGE_ID: 'xpay_loginID',
   API_METHODS: {
     STUDENT: 'student',
