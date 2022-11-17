@@ -22,7 +22,7 @@ function Student() {
       .then(({ data }) => setStudent(data));
   });
 
-  if (!student) return null;
+  if (!student.name) return null;
 
   return (
     <div className="student">
