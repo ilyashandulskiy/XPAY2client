@@ -19,6 +19,7 @@ function Item({
 }: Iprops) {
   const [hover, setHover] = useState<boolean>(false);
   const dispatch = useDispatch();
+  const cashColor = (cash === 0 ? 'black' : (cash > 0 ? '198754' : '#dc3545'));
 
   const onAddCash = () => {
     dispatch(setModal(constants.MODAL_STATES.ADD_CASH));
@@ -59,7 +60,7 @@ function Item({
     >
       <th scope="row">{index + 1}</th>
       <td onClick={onRename}>{name}</td>
-      <td>{displayCash(cash)}</td>
+      <td style={{ color: cashColor }}>{displayCash(cash)}</td>
       <td className="item-buttons">
         <div
           className="item-buttons__inner"
