@@ -14,7 +14,8 @@ interface Istudent {
 
 function Student() {
   const { id } = useParams();
-  const [student, setStudent] = useState<Istudent>();
+  const [student, setStudent] = useState<Istudent>({} as Istudent);
+  const cashColor = (student?.cash === 0 ? 'black' : (student?.cash > 0 ? '#198754' : '#dc3545'));
 
   useEffect(() => {
     instance.get(`${constants.API_METHODS.STUDENT}/${id}`)
@@ -25,7 +26,7 @@ function Student() {
 
   return (
     <div className="student">
-      <p className="display-1">{ displayCash(student.cash) }</p>
+      <p className="display-1" style={{ color: cashColor }}>{ displayCash(student.cash) }</p>
       <p className="h1">{student.name}</p>
 
       <History
