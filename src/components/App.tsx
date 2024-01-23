@@ -5,7 +5,7 @@ import Router from 'router';
 
 function App() {
   return (
-    <BrowserRouter basename="xpay/">
+    <BrowserRouter>
       <Router />
     </BrowserRouter>
   );
