@@ -1,5 +1,5 @@
 const constants = {
-  BASE_URL: 'https://xpayapi.ilyaprojects.com/',
+  BASE_URL: 'https://ilyashandulskiy-xpay2server-706c.twc1.net/',
   STUDENT_URL: 'https://xpay.ilyaprojects.com/student/',
   LOCAL_STOTAGE_ID: 'xpay_loginID',
   API_METHODS: {
